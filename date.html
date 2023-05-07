@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                padding-top: 100px;
+                border: 1px solid black;
+                background-color:aqua;
+               
+            }
+            pre{
+                margin-top: auto;
+            }
+
+            p{
+                font-size: 50px;
+                width: fit-content;
+                background-color: coral ;
+                text-align: center;
+                  
+            }
+            div{
+                border: 5px solid blue ;width: fit-content;
+                position: absolute ;
+                left: 550px;
+              
+            }
+
+        </style>
+    </head>
+    <script>
+        function f1(){
+
+            let d =document.getElementById("i1").value
+            let a= new Date(d)
+            let b=a.getDay()
+
+            
+            
+            switch(b)
+            {
+                case 0: 
+                document.getElementById("p1").innerText="sunday"
+                break;
+                case 1:document.getElementById("p1").innerText="monday"
+                break;
+                case 2: 
+                document.getElementById("p1").innerText="tuesaday"
+                break;
+                case 3:document.getElementById("p1").innerText="wednseday"
+                break;
+                case 4: 
+                document.getElementById("p1").innerText="thursday"
+                break;
+                case 5:document.getElementById("p1").innerText="friday"
+                break;
+                case 6: document.getElementById("p1").innerText="saturday"
+                break;
+
+            }
+        }
+    </script>
+
+
+  <body>
+    <div>
+    <pre>
+
+    Enter Date:   <input type="date" id="i1" >   
+    <br>
+    <button onclick="f1()">see the day</button>  
+         <p id="p1"></p>
+    </pre>
+    </div>
+  </body>
+</html>
