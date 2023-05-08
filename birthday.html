@@ -1,0 +1,45 @@
+<html>
+    <script>
+        function f1(){
+            let d= new Date(document.getElementById("i1").value)
+            let d1= Date()
+            let d2= new Date(d1)
+
+            let diff=(d2-d)/(1000*60*60*24*365)
+            console.log("diff=",diff)
+
+            let diff1= parseInt((d2-d)/(1000*60*60*24*365)) // years
+
+            console.log("diff1=",diff1)
+
+            let diff2= ((diff-diff1)*12) 
+            console.log("diff2=",diff2)
+
+            let diff3=parseInt((diff-diff1)*12)  // months
+            console.log("diff3=",diff3);
+
+            let diff4=((diff2-diff3)*30.41)
+            console.log("diff4=",diff4)
+
+            let diff5=parseInt((diff2-diff3)*30.41)
+            console.log("diff5=",diff5)         // days
+
+            document.getElementById("p1").innerHTML=`<h1>age is ${diff1} "years  ," ${diff3} "months ," ${diff5} "days ,"</h1>`
+
+        }
+    
+    
+    
+    </script>
+
+
+<body>
+    <pre>
+    <input type="date"  id="i1">
+
+    <button onclick="f1()">see birthday day</button>
+
+    <p id="p1"></p>
+    </pre>
+</body>
+</html>
