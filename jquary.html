@@ -1,0 +1,39 @@
+     
+     <html>
+         <head>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+         <script>
+                $(document).ready(()=> {
+
+                    $("#b1").click(()=>{
+                        $("#p1").text("hello World")
+                        console.log("hello world") 
+                                      })
+                                         
+                    $("#b2").click(()=>{
+                        $("#p1").text("")
+                    })
+
+                    $("#i1").change(()=>{
+                        let x= $("#i1").val()
+                        $("#p1").html("<i>"+x+"</i>")
+
+                    })
+                })
+         
+         </script>
+
+        </head>
+
+     <body>
+         <button id="b1"> ok </button>
+
+
+         <input type="reset"  id="b2">
+         <button id="b3">change to italic</button>
+         <input type="text" id="i1">
+        <p id="p1"></p>
+        
+     </body>
+     </html>

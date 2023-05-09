@@ -1,0 +1,30 @@
+
+        <html>
+                <head>
+                        
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+
+                        <script>
+                        $().ready(()=>{
+
+                             $("#b1").click(()=>{   
+                                let d=new Date()
+                                let output= d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()
+                                $("#i1").val(output)
+                        })
+                                
+
+                        })
+
+                        </script>
+                </head>
+
+
+        <body>
+                <button id="b1">show time</button>
+                <br>
+                <input type="text" id="i1">
+
+        </body>
+        </html>
