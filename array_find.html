@@ -1,0 +1,50 @@
+
+<html>
+                <script>
+                    var arr=[10,20,30,40,50,60]
+
+                    function f1(){
+                        document.getElementById("p1").innerText=arr
+                    }
+
+
+                    function f2(){
+                        let element=document.getElementById("i1").value
+                        let x=0
+                        
+                        for(let i=0; i<arr.length; i++){
+
+                               if(arr[i]== element){
+                               
+                                x=x+1
+                                }    
+                        }
+                        if(x>0){
+                            let b=arr.indexOf(element)
+                            document.getElementById("p2").innerText =b 
+                        }
+                        else{
+                            document.getElementById("p2").innerText="ELement NOT present in array "
+
+                        }
+                    }
+
+
+
+                </script>
+
+
+        <body>
+            <pre>
+            <input type="number" id="i1">
+            <br>
+            <button onclick="f1()">show array</button> 
+            <button onclick="f2()">find element</button>
+
+            <p id="p1"></p>
+            <p id="p2"></p>
+
+            </pre>
+            
+        </body>
+        </html>
