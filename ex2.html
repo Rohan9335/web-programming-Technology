@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            function validateit(){
+                let x = document.forms["form1"]["fname"].value
+                let name= document.forms["form1"]["fname"].value
+                let age = document.forms.form1.fage.value
+                let dob = document.forms["form1"]["#i3"].value
+                let email = document.forms.form1.fmail.value
+
+                // console.log("name","age","dob","email")
+                console.log(name)
+                console.log(age)
+                console.log(age)
+                
+
+                document.getElementById("#p1").text = name
+                
+            }
+        
+        </script>
+    </head>
+<body>
+    <pre>
+        <form action="" name="form1" onsubmit=" return validateit()">
+
+           name: <input type="text"  id="i1" name="fname" >
+            age: <input type="number" id="i2" name="fage"  >
+            dob: <input type="date"   id="i3" name="fdate" >  
+          email: <input type="text" id="i4" name="fmail" >
+          <input type="submit" name="submit" id="b1" value="submit">
+
+        </form>
+        <p id="p1" ></p>
+
+    </pre>
+
+</body>
+</html>

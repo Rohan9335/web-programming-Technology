@@ -1,0 +1,44 @@
+<html>
+    <style>
+    .desc *{
+         display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+                
+    <script>
+        $(document).ready(() =>{  
+        // $("div").find("span").find("span").css({"color" :"red" , "border": "2px solid red", "background-color" : "yellow"  })
+            // $("#p2").css({"color" :"red" , "border": "2px solid red"})
+        $("#s2").children().css({"color": "blue", "background-color": "blue"})
+    })
+    </script>
+
+<body>
+    <pre>
+    <div class="desc" style="width: 500px;">d1
+
+        <p> p1 
+            <span id="s1"> 
+                span 1
+                <span id="s2"> span2
+                    <span id="s3">span3
+
+                    </span>
+                </span>
+
+            </span>
+        </p>
+    </div>
+
+    <p id="p2"> p2
+        <span id="s4">s4</span>
+    </p>
+</pre>
+</body>
+</html>

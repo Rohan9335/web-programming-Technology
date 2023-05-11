@@ -1,0 +1,62 @@
+<html>
+
+        <script>
+            function validateit(){
+
+                let name = document.forms["form1"]["fn"].value
+                let age = document.forms["form1"]["fage"].value
+                let mail = document.forms["form1"]["fmail"].value
+                
+                var res1,res2,res3
+                if(name.trim()=="" || name.length<2 || !isNaN(name))
+                {
+                    alert("Enter valid name")
+                    document.forms.form1.fn.focus()
+
+                    res1 =false;
+                }
+                else{
+                    res1 =true;
+                }
+                // return result
+
+                if(age<18)
+                {
+                    alert("Age must be Greater than 18")
+                    
+                    res2 = false
+                }
+                else{
+                    res2= true
+                }
+
+                if(mail.trim()=="" || mail.charAt(mail.length-4)!="." )
+                {
+                    alert("invalid mail")
+                    res3 = false
+                }
+                else{
+                    res3 = true
+                }
+
+                return res1&&res2&&res3
+
+            }
+
+        </script>
+
+    <body>
+        <form action="" onsubmit="return validateit()" name="form1">
+            <pre>
+                name: <input type="text" name="fn" id="i1">
+                age: <input type="number" name="fage" >
+                email: <input type="text" name="fmail" >
+                <input type="submit" name="submit" value="submit">
+                <!-- <button onclick="validateit()">ok</button> -->
+
+            </pre>
+
+
+        </form>
+    </body>
+</html> 
