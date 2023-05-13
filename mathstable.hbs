@@ -1,0 +1,28 @@
+<html>
+
+    <body>
+         <pre>
+                <form action="/generatetable" method="get">
+
+                   give number: <input type="text" name="num1">
+                   <input type="submit" name="submit" value="submit">
+
+               
+
+                <table>
+                    {{#each rowdata}}
+                    <tr>
+                        <td>
+                            {{this}}
+                        </td>
+                    </tr>
+                    {{/each}}
+
+
+                </table>
+                 </form>
+
+         </pre>
+
+    </body>
+</html>
