@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function f1()
+        {
+            let d=document.getElementById("i1").value
+            let a= new date(d)
+            let b= new date()
+            let result=(b-a)/(1000*60*60*24*365)
+            
+            document.getElementById("p1").innerText = result
+        }
+    </script>
+
+
+<body>
+    <pre>
+    <input type="date" id="i1">
+
+      <button onchange="f1()"></button>
+    <p id="p1"></p>
+    </pre>
+</body>
+</html>
