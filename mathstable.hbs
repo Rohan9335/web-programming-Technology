@@ -4,12 +4,13 @@
          <pre>
                 <form action="/generatetable" method="get">
 
-                   give number: <input type="text" name="num1">
-                   <input type="submit" name="submit" value="submit">
+                   give number: <input type="number" name="num1">
+                   <input type="submit"  value="submit">
 
                
 
-                <table>
+                <table border="1">
+
                     {{#each rowdata}}
                     <tr>
                         <td>

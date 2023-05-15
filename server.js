@@ -8,8 +8,12 @@ app.set('view engine', 'hbs');
 
 app.get("/" ,(req,res)=>{
 
-    res.sendFile("C:\\Users\\IET\\Desktop\\rohan\\java script\\Multipage_Appn\\welcome.html")
+    res.sendFile("C:\\Users\\IET\\Desktop\\rohan\\java script\\Multipage_Appn\\views\\welcome.hbs")
 
+})
+app.get("/login",(req,res)=>{
+
+    res.render("login")
 })
 
 app.get("/verify",(req,res)=>{
@@ -41,12 +45,12 @@ app.post("/docalculation",(req,res)=>{
 
 app.get("/maths",(req,res)=>{
 
-    app.render("mathstable")
+    res.render("mathstable")
 })
 
 app.get("/generatetable",(req,res)=>{
 
-    let n1 = req.body.num1
+    let n1 = (req.query.num1)
     let arr=[]
     for(let i=1; i<=10; i++)
     {
